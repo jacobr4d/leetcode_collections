@@ -1,6 +1,6 @@
 import heapq
 
-class MinHeap:
+class MaxHeap:
     def __init__(self):
         self.data = []
 
@@ -9,13 +9,13 @@ class MinHeap:
 
     def top(self):
         if not len(self):
-            raise IndexError('top of empty minheap')
-        return self.data[0]
+            raise IndexError('top of empty maxheap')
+        return -self.data[0]
 
     def push(self, val):
-        heapq.heappush(self.data, val)
+        heapq.heappush(self.data, -val)
 
     def pop(self):
         if not len(self):
-            raise IndexError('pop from empty minheap')
-        return heapq.heappop(self.data)
+            raise IndexError('pop from empty maxheap')
+        return -heapq.heappop(self.data)

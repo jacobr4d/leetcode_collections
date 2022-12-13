@@ -1,27 +1,27 @@
 import unittest
-from more_collections.minheap import MinHeap
+from more_collections.maxheap import MaxHeap
 
 class Testing(unittest.TestCase):
 
     # init()
     def test_init(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         self.assertTrue(True)
 
     # len()
     def test_truthy_empty(self):
-        self.assertFalse(MinHeap())
+        self.assertFalse(MaxHeap())
 
     def test_truthy_nonempty(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         heap.push(1)
         self.assertTrue(heap)
 
     def test_len_empty(self):
-        self.assertEqual(len(MinHeap()), 0)
+        self.assertEqual(len(MaxHeap()), 0)
     
     def test_len_nonempty(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         heap.push(1)
         heap.push(2)
         heap.push(3)
@@ -29,43 +29,43 @@ class Testing(unittest.TestCase):
 
     # top()
     def test_top_empty(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         self.assertRaises(IndexError, lambda: heap.top())
 
     def test_top_one(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         heap.push(1)
         self.assertEqual(heap.top(), 1)
 
     def test_top_two(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         heap.push(1)
         heap.push(2)
-        self.assertEqual(heap.top(), 1)
+        self.assertEqual(heap.top(), 2)
 
     # push()
     def test_push_one(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         heap.push(1)
         self.assertTrue(heap)
 
     def test_push_many(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         for i in range(100):
             heap.push(i)
         self.assertTrue(heap)
 
     # pop()
     def test_pop_empty(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         self.assertRaises(IndexError, lambda: heap.pop())
 
     def test_pop_right_order(self):
-        heap = MinHeap()
+        heap = MaxHeap()
         heap.push(3)
         heap.push(1)
         heap.push(2)
-        self.assertEqual(heap.pop(), 1)
+        self.assertEqual(heap.pop(), 3)
 
 
 if __name__ == '__main__':
