@@ -19,6 +19,22 @@ class Trie:
             node = node.children[letter]
         node.is_word = True
 
+    def search(self, word: str) -> bool:
+        node = self.root
+        for letter in word:
+            if letter not in node.children:
+                return False
+            node = node.children[letter]
+        return node.is_word
+
+    def startsWith(self, prefix: str) -> bool:
+        node = self.root
+        for letter in prefix:
+            if letter not in node.children:
+                return False
+            node = node.children[letter]
+        return True
+
     def delete(self, word):
         nodes = [self.root]
         node = self.root
