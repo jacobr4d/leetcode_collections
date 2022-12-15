@@ -30,23 +30,6 @@ class Testing(unittest.TestCase):
         trie.insert("abc")
         self.assertEqual(trie.getsize(), 1)
 
-    # depth()
-    def test_depth_empty(self):
-        trie = Trie()
-        self.assertEqual(trie.getdepth(), 0)
-
-    def test_depth_one(self):
-        trie = Trie()
-        trie.insert("a")
-        trie.insert("b")
-        self.assertEqual(trie.getdepth(), 1)
-
-    def test_depth_three(self):
-        trie = Trie()
-        trie.insert("a")
-        trie.insert("xyz")
-        self.assertEqual(trie.getdepth(), 3)
-
     # insert()
     def test_insert_one(self):
         trie = Trie()
@@ -91,14 +74,11 @@ class Testing(unittest.TestCase):
         trie.delete("abc")
         self.assertEqual(trie.getsize(), 0)
 
-    def test_delete_changes_depth(self):
+    def delete_one(self):
         trie = Trie()
         trie.insert("abc")
         trie.delete("abc")
-        self.assertEqual(trie.getdepth(), 0)
-
-
-
+        self.assertFalse(trie.search("abc"))
 
 if __name__ == '__main__':
     unittest.main()

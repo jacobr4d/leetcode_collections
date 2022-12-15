@@ -15,12 +15,8 @@ class Trie:
 
     def getsize(self):
         return self.size
-
-    def getdepth(self):
-        return self.depth
     
     def insert(self, word):
-        self.depth = max(self.depth, len(word))
         node = self.root
         for letter in word:
             if letter not in node.children:
