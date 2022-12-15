@@ -8,7 +8,7 @@ In order to serve that purpose well the code has to be
 1. small, to not distract from the more important parts of the submission
 
 and ideally is also
-1. fast 
+1. as optimally in space and time as possible, without becoming large or difficult to understand
 
 This repo also serves another purpose along the way namely
 1. practice writing unit tests
