@@ -1,1 +1,1 @@
-Classes that are useful for leetcode problems that aren't already implemented in Python's '''collections''' module
+Classes that are useful for leetcode problems that aren't already implemented in Python's ``collections`` module
