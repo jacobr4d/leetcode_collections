@@ -1,5 +1,5 @@
 import unittest
-from more_collections.maxheap import MaxHeap
+from leetcode_collections.maxheap import MaxHeap
 
 class Testing(unittest.TestCase):
 

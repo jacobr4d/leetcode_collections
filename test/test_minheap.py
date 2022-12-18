@@ -1,5 +1,5 @@
 import unittest
-from more_collections.minheap import MinHeap
+from leetcode_collections.minheap import MinHeap
 
 class Testing(unittest.TestCase):
 

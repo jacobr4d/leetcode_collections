@@ -1,5 +1,5 @@
 import unittest
-from more_collections.unionfind import UnionFind
+from leetcode_collections.unionfind import UnionFind
 
 class Testing(unittest.TestCase):
 

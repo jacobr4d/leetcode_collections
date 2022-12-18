@@ -1,5 +1,5 @@
 import unittest
-from more_collections.trie import Trie
+from leetcode_collections.trie import Trie
 
 class Testing(unittest.TestCase):
 
