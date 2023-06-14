@@ -1,6 +1,7 @@
 import heapq
 
 class MinHeap:
+    # TODO: give iterable constructor
     def __init__(self):
         self.data = []
 
